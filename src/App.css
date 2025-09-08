@@ -1,0 +1,128 @@
+.box-shadow{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border: none;
+}
+
+nav {
+    margin-bottom: 30px;
+}
+.job-posting-card{
+    margin: 20px 0 20px 0;
+}
+
+.job-posting-card .card-text{
+    font-size: 13px;
+    line-height: 22px;
+    text-align: left;
+    display: -webkit-box; /* On précise qu'on veut utiliser webkit-box */
+    -webkit-box-orient: vertical; /* On indique le sens du texte */
+    -webkit-line-clamp: 4; /* On donne le nombre de lignes souhaité */
+    overflow: hidden; /* On cache tout ce qui peut dépasser */
+    width: 100%;
+    margin: 15px 0 15px 0;
+}
+
+.job-posting-card .card-title.h5{
+    font-size: 1rem;
+}
+
+.job-posting-card .card-title span.badge{
+    float: right;
+}
+
+.job-posting-card .btn{
+    margin-bottom: 10px;
+}
+
+.job-posting-card .card-footer{
+    font-size: 11px;
+    font-style: italic;
+}
+
+.referral-status{
+    margin: 25px 0 25px 0;
+    border-bottom: solid 1px rgb(214, 214, 214);
+    padding-bottom: 30px;
+}
+
+.referral-status:last-child{
+    border: none;
+}
+
+.referral-status .text-end{
+    font-size: 11px;
+}
+
+.modal-body p{
+    line-height: 28px;
+}
+
+.modal-body ul{
+    list-style-position: inside;
+    line-height: 28px;
+    list-style-type: circle;
+}
+
+.modal-body{
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.employee-profile .card-title{
+    margin: 10px 0 10px 0;
+}
+
+.employee-profile .card-body .card-text{
+    margin-bottom: 5px;
+    font-size: 1.01rem;
+    color: rgb(102, 102, 102);
+}
+
+.card-title.mb-0 {
+    margin-top: 10px;
+}
+
+.employee-badges img{
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.employee-badges div[class^="col-"] {
+    margin: 30px 0 30px 0;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: rgb(46, 46, 46);
+    font-weight: bold;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active:hover{
+    color: rgb(46, 46, 46);
+    cursor: default;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    color: rgb(136, 136, 136);
+}
+
+.nav-tabs .nav-link:hover{
+    color: rgb(68, 178, 230);
+}
+
+.tab-content .tab-pane{
+    border-radius: 0 0 10px 10px;
+}
+
+.login{
+    margin-top: 50px;
+}
+
+.login .card-title {
+    font-size: 1.5rem;
+    margin: 10px 0 20px 0;
+    color: rgb(70, 70, 70);
+    text-align: center;
+}
+
+.login .mb-3{
+    margin: 20px 0 30px 0;
+}
