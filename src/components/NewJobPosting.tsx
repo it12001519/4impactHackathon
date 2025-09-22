@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Card, Col, Form, InputGroup, Modal } from "react-bootstrap";
+import { Button, Card, Col, Form, Modal } from "react-bootstrap";
 import { PlusCircleDotted } from "react-bootstrap-icons";
 import DefaultEditor from "react-simple-wysiwyg"
 
@@ -82,7 +82,7 @@ export default function NewJobPosting (){
                     id="custom-switch"
                     label="Hard to fill job position"
                     defaultChecked={prioJobPosting}
-                    onChange={(e) => setPrioJobPosting(!prioJobPosting)} />
+                    onChange={() => setPrioJobPosting(!prioJobPosting)} />
                 <Button className='col-6' variant='primary' onClick={postJobPosting}>Post</Button>
             </Modal.Footer>
         </Modal>
