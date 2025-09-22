@@ -1,11 +1,16 @@
+import { useState } from "react"
 import { Button, Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap"
 import { Lock, PersonCircle } from "react-bootstrap-icons"
 import { useNavigate } from "react-router-dom"
 
 function Login () {
+    const [username, setUsername] = useState()
+    const [password, setPassword] = useState()
+
+
     let naviagte = useNavigate()
     const toProfile = () => {
-        naviagte('/profile')
+        username != 'admin' && password != 'admin' ? naviagte('/profile?user=John Doe') : naviagte('/admin?user=Admin')
     }
 
     return <>
@@ -25,6 +30,7 @@ function Login () {
                                         aria-describedby="basic-addon1"
                                         type="text"
                                         defaultValue='john.doe'
+                                        onChange={(e) => setUsername(e.target.value)}
                                         />
                                     </InputGroup>
                                 </Form.Group>
@@ -37,6 +43,7 @@ function Login () {
                                         aria-describedby="basic-addon1"
                                         type="password"
                                         defaultValue='password'
+                                        onChange={(e) => setPassword(e.target.value)}
                                         />
                                     </InputGroup>
                                 </Form.Group>

@@ -1,10 +1,11 @@
 import {PersonCircle, BoxArrowRight} from 'react-bootstrap-icons'
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import { useSearchParams } from "react-router-dom"
 
 function Navigation(){
+    let [searchParams, setSearchParams] = useSearchParams()
+    const user = searchParams.get("user")
     return <>
         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
             <Container>
@@ -15,7 +16,7 @@ function Navigation(){
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto"/>
                     <Nav>
-                        <NavDropdown title="John Doe" id="collapsible-nav-dropdown">
+                        <NavDropdown title={user} id="collapsible-nav-dropdown">
                             <NavDropdown.Item href="/profile"><PersonCircle /> Profile</NavDropdown.Item>
                             <NavDropdown.Item href="/"><BoxArrowRight /> Logout</NavDropdown.Item>
                         </NavDropdown>

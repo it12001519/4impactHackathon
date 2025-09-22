@@ -126,3 +126,49 @@ nav {
 .login .mb-3{
     margin: 20px 0 30px 0;
 }
+
+.admin-reports{
+    color: #4e4e4e;
+}
+
+.admin-reports .admin-report-title{
+    font-size: 1rem;
+    font-weight: 00;
+}
+
+.admin-reports .admin-report-count{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.admin-reports .card-subtitle,
+.admin-reports .admin-report-count{
+    margin-top: 15px;
+}
+
+.admin-reports .card-subtitle {
+    color: #646464;
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+.btn-group .btn {
+    min-width: 80px;
+}
+
+#job-posting .modal-content{ 
+    padding: 0 10px;
+}
+
+#job-posting .rsw-editor{
+    padding: 0px;
+    height: 200px;
+    overflow-y: auto;
+    margin: 0 auto
+}
+
+#job-posting .form-label{
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
