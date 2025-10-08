@@ -15,11 +15,11 @@ function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  let naviagte = useNavigate();
+  let navigate = useNavigate();
   const toProfile = () => {
     username != "admin" && password != "admin"
-      ? naviagte("/profile?user=John Doe")
-      : naviagte("/admin?user=Admin");
+      ? navigate("/profile?user=John Doe")
+      : navigate("/admin?user=Admin");
   };
 
   return (

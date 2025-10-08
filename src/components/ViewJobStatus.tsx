@@ -7,6 +7,7 @@ import {
   ProgressBar,
   ButtonGroup,
 } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 interface UploadResumeProps {
   jobTitle?: string;
@@ -17,6 +18,13 @@ const ViewJobStatus = ({ jobTitle, jobId }: UploadResumeProps) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  let navigate = useNavigate();
+
+  const toNewCandidateForm = () => {
+    navigate("/new-candidate?user=Admin")
+  }
+
   return (
     <>
       <Button
@@ -98,7 +106,7 @@ const ViewJobStatus = ({ jobTitle, jobId }: UploadResumeProps) => {
             </Col>
             <Col md={3}>
               <ButtonGroup size="sm">
-                <Button variant="primary">Review</Button>
+                <Button variant="primary" onClick={toNewCandidateForm}>Review</Button>
               </ButtonGroup>
             </Col>
             <Col md={9}>
