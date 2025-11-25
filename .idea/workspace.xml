@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef54fcd4-1725-4966-9b66-b1c66e7b1244" name="Changes" comment="integrated initial backend">
+      <change afterPath="$PROJECT_DIR$/backend/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/ReferralAppApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/controller/JobOpeningController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/controller/ReferralController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/model/Candidate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/model/CandidateStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/model/JobOpening.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/model/Referral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/repository/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/repository/JobOpeningRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/repository/ReferralRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/service/JobOpeningService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/Hackathon/ReferralApp/service/ReferralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/Hackathon/ReferralApp/ReferralAppApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/4impact-logo.webp" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/4impact-logo.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/championship-trophy.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/championship-trophy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/connection.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/connection.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/diamond.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/diamond.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/dollar.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/dollar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/flag.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/flag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/high-quality.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/high-quality.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/insignia.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/insignia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/rewards.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/rewards.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/shopping-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/shopping-cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Achivements.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Achivements.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AdminDashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AdminDashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AdminProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AdminProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChartReport.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ChartReport.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmployeeDashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/EmployeeDashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/JobPosting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewCandidateForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NewCandidateForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewJobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NewJobPosting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ReferralStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ReferralStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RewardsTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RewardsTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StatReport.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StatReport.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UploadResume.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UploadResume.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ViewJobStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ViewJobStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/vite-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.node.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jeptsu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/it12001519/4impactHackathon&quot;,
+    &quot;accountId&quot;: &quot;63f24199-b027-4426-a94e-072344460c45&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="32lKQmFxbSAQMUcTFTluu9V2Dhq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Maven.Unnamed.executor": "Run",
+    "Maven.clean install.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Jep/IdeaProjects/4impactHackathon",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jep\IdeaProjects\4impactHackathon\backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jep\IdeaProjects\4impactHackathon\frontend" />
+      <recent name="C:\Users\Jep\IdeaProjects\4impactHackathon\backend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.clean install">
+    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="-U" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/backend" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="clean install" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="-U" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/backend" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Maven.clean install" />
+      <item itemvalue="Maven.Unnamed" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef54fcd4-1725-4966-9b66-b1c66e7b1244" name="Changes" comment="" />
+      <created>1757989706333</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757989706333</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="integrated initial backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrated initial backend" />
+  </component>
+</project>
