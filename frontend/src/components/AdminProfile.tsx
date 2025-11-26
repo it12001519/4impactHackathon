@@ -1,5 +1,6 @@
 import { Button, Card } from "react-bootstrap";
 import { EnvelopeAt, Phone, ShopWindow } from "react-bootstrap-icons";
+import ShopButton from "./ShopButton";
 
 function AdminProfile() {
   return (
@@ -38,11 +39,7 @@ function AdminProfile() {
           />
           <Card.Title>Total Reward Points 723</Card.Title>
 
-          <div className="d-grid gap-2">
-            <Button variant="outline-dark">
-              <ShopWindow style={{ marginTop: "-3px" }} /> Shop
-            </Button>
-          </div>
+          <ShopButton />
         </Card.Body>
       </Card>
     </>

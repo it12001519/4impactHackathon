@@ -1,10 +1,42 @@
+import { useEffect, useState } from "react";
 import UploadResume from "./UploadResume";
 import { Card, Badge, Col, Row } from "react-bootstrap";
+import axios from "axios";
 
 function JobPostingTable() {
+  const [jobPostings, setJobPostings] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:8080/api/jobs')
+      .then(response => { 
+        setJobPostings(response.data)
+      })
+  }, []);
+
   return (
     <>
       <Row style={{ padding: "0px 20px 0 20px" }}>
+        {
+          jobPostings.map((jobPost) => (
+            <Col md={4}>
+              <Card className="job-posting-card">
+                <Card.Body>
+                  <Card.Title>
+                    {jobPost.jobTitle} <Badge bg="danger">{jobPost.referrals.length}</Badge>
+                  </Card.Title>
+                  <Card.Text>
+                    <p dangerouslySetInnerHTML={{__html: jobPost.jobDesc}}></p>
+                  </Card.Text>
+                  <UploadResume
+                    jobId={jobPost.id}
+                  />
+                  <Card.Footer className="text-center">
+                    Posted now
+                  </Card.Footer>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))
+        }
         <Col md={4}>
           <Card className="job-posting-card">
             <Card.Body>
