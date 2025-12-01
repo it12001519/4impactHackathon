@@ -3,6 +3,7 @@ import EmployeeDashboard from "./components/EmployeeDashboard";
 import Login from "./components/Login";
 import AdminDashboard from "./components/AdminDashboard";
 import NewCandidateForm from "./components/NewCandidateForm";
+import Shop from "./components/Shop";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/profile" element={<EmployeeDashboard />}></Route>
           <Route path="/admin" element={<AdminDashboard />}></Route>
           <Route path="/new-candidate" element={<NewCandidateForm />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
         </Routes>
       </BrowserRouter>
     </>

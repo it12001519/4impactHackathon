@@ -68,6 +68,9 @@ function Login() {
                   </Button>
                 </div>
               </Card.Body>
+              <Card.Footer className="text-center">
+                <img src="src/assets/BadgeQuest - Transparent.png" alt="" width={250} />
+              </Card.Footer>
             </Card>
           </Col>
         </Row>

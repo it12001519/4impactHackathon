@@ -5,16 +5,15 @@ import { useSearchParams } from "react-router-dom";
 
 function Navigation() {
   let [searchParams, setSearchParams] = useSearchParams();
-  const user = searchParams.get("user");
+  let user = searchParams.get("user") === null ? "John Doe" : searchParams.get("user");
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="/profile">
             <img
-              src="src/assets/4impact-logo.webp"
-              width="75"
-              height="30"
+              src="src/assets/logo-1.png"
+              width="40"
               className="d-inline-block align-top"
               alt=""
             />

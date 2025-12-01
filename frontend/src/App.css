@@ -19,6 +19,7 @@ nav {
     -webkit-line-clamp: 4; /* On donne le nombre de lignes souhaité */
     overflow: hidden; /* On cache tout ce qui peut dépasser */
     width: 100%;
+    min-height: 88px;
     margin: 15px 0 15px 0;
 }
 

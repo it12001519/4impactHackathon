@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { Button, Card, Col, Form, Modal } from "react-bootstrap";
 import { PlusCircleDotted } from "react-bootstrap-icons";
@@ -33,9 +34,12 @@ export default function NewJobPosting() {
       postedBy: "admin-user",
     };
 
+    axios.post("http://localhost:8080/api/jobs", jobPostingData)
+    .then(response => console.log(response))
+    .catch(error => console.error(error))
+
     handleClose();
 
-    console.log("data: ", JSON.stringify(jobPostingData));
   };
 
   return (
