@@ -1,17 +1,12 @@
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Button
-} from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import Navigation from "./Navigation";
-import { EnvelopeAt, Phone, ShopWindow } from "react-bootstrap-icons";
+import { EnvelopeAt, Phone } from "react-bootstrap-icons";
 import ShopButton from "./ShopButton";
 
 export default function Shop() {
-const iframe = '<iframe src="https://www.abenson.com/" width="100%" height="900"></iframe>';
-return (
+  const iframe =
+    '<iframe src="https://www.abenson.com/" width="100%" height="900"></iframe>';
+  return (
     <>
       <Container>
         <Navigation />
@@ -50,14 +45,16 @@ return (
                   className="rounded-circle"
                   style={{ width: "80px" }}
                 />
-                <Card.Title>Total Reward Points 550</Card.Title>
+                <Card.Title>
+                  Total Reward Points {localStorage.getItem("referralCount")}
+                </Card.Title>
 
                 <ShopButton />
               </Card.Body>
             </Card>
           </Col>
           <Col md={9}>
-            <div dangerouslySetInnerHTML={{__html: iframe}} />
+            <div dangerouslySetInnerHTML={{ __html: iframe }} />
           </Col>
         </Row>
       </Container>

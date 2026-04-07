@@ -10,16 +10,26 @@ interface UploadResumeProps {
 const UploadResume = ({ jobId }: UploadResumeProps) => {
   const [show, setShow] = useState(false);
   const [jobPost, setJobPost] = useState({});
-  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  jobId = jobId === undefined ? 0 : jobId;
   useEffect(() => {
-    axios.get("http://localhost:8080/api/jobs/"+jobId)
-      .then(response => { 
-        setJobPost(response.data)
-      })
-  }, []);
+    axios.get("http://localhost:8080/api/jobs/" + jobId).then((response) => {
+      setJobPost(response.data);
+    });
+  }, [jobId]);
 
-  console.log(jobPost)
+  const handleClose = () => {
+    const referralData = {
+      employee: { id: 1 },
+      candidate: { id: 1 },
+      jobOpening: { id: jobId },
+      resume: "",
+    };
+
+    axios.post("http://localhost:8080/api/referrals", referralData);
+    localStorage.setItem("newReferral", JSON.stringify(referralData));
+    setShow(false);
+  };
 
   return (
     <>
@@ -47,16 +57,16 @@ const UploadResume = ({ jobId }: UploadResumeProps) => {
         <Modal.Body>
           <Row>
             <Modal.Title>Job Description</Modal.Title>
-            <p dangerouslySetInnerHTML={{__html: jobPost.jobDesc}}></p>
+            <p dangerouslySetInnerHTML={{ __html: jobPost.jobDesc }}></p>
           </Row>
           <Row>
             <Modal.Title>Responsibilities</Modal.Title>
-            <p dangerouslySetInnerHTML={{__html: jobPost.jobResp}}></p>
+            <p dangerouslySetInnerHTML={{ __html: jobPost.jobResp }}></p>
           </Row>
           <Row>
             <Modal.Title>Requirements and Qualifications</Modal.Title>
             <p>
-              <p dangerouslySetInnerHTML={{__html: jobPost.jobQual}}></p>
+              <p dangerouslySetInnerHTML={{ __html: jobPost.jobQual }}></p>
             </p>
           </Row>
         </Modal.Body>

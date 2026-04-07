@@ -25,7 +25,7 @@ export default function NewJobPosting() {
   const [prioJobPosting, setPrioJobPosting] = useState(false);
 
   const postJobPosting = () => {
-    let jobPostingData = {
+    const jobPostingData = {
       jobTitle: jobTitle,
       jobDesc: jobDescHtml,
       jobResp: jobRespHtml,
@@ -34,12 +34,11 @@ export default function NewJobPosting() {
       postedBy: "admin-user",
     };
 
-    axios.post("http://localhost:8080/api/jobs", jobPostingData)
-    .then(response => console.log(response))
-    .catch(error => console.error(error))
+    axios
+      .post("http://localhost:8080/api/jobs", jobPostingData)
+      .catch((error) => console.error(error));
 
     handleClose();
-
   };
 
   return (

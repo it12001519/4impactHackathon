@@ -9,8 +9,28 @@ import {
 import Navigation from "./Navigation";
 import { Paperclip } from "react-bootstrap-icons";
 import AdminProfile from "./AdminProfile";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function NewCandidateForm() {
+  const navigate = useNavigate();
+
+  const toSubmit = () => {
+    const rewards = {
+      name: "john doe",
+      email: "john.doe@mock.com",
+      points: 100,
+    };
+    const rewardCount = parseInt(localStorage.getItem("referralCount")) + 100;
+    localStorage.setItem("referralCount", String(rewardCount));
+
+    axios
+      .put("http://localhost:8080/api/employees/1/points", rewards)
+      .catch((error) => console.error(error));
+
+    navigate("/admin?user=Admin");
+  };
+
   return (
     <>
       <Container>
@@ -31,7 +51,11 @@ function NewCandidateForm() {
                 label="First Name"
                 className="mb-4"
               >
-                <Form.Control type="text" placeholder="First Name" />
+                <Form.Control
+                  type="text"
+                  placeholder="First Name"
+                  value="John"
+                />
               </FloatingLabel>
 
               <FloatingLabel
@@ -39,19 +63,39 @@ function NewCandidateForm() {
                 label="Middle Name"
                 className="mb-4"
               >
-                <Form.Control type="text" placeholder="Middle Name" />
+                <Form.Control
+                  type="text"
+                  placeholder="Middle Name"
+                  value="Santos"
+                />
               </FloatingLabel>
 
               <Row className="mb-4">
-                <Form.Group as={Col} className="col-10" controlId="formGridLastName">
+                <Form.Group
+                  as={Col}
+                  className="col-10"
+                  controlId="formGridLastName"
+                >
                   <FloatingLabel controlId="lastName" label="Last Name">
-                    <Form.Control type="text" placeholder="Last Name" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Last Name"
+                      value="Smith"
+                    />
                   </FloatingLabel>
                 </Form.Group>
 
-                <Form.Group as={Col} className="col-2" controlId="formGridNameSufix">
+                <Form.Group
+                  as={Col}
+                  className="col-2"
+                  controlId="formGridNameSufix"
+                >
                   <FloatingLabel controlId="lastName" label="Name Suffix">
-                    <Form.Control type="text" placeholder="Name Suffix" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Name Suffix"
+                      value="N/A"
+                    />
                   </FloatingLabel>
                 </Form.Group>
               </Row>
@@ -61,7 +105,11 @@ function NewCandidateForm() {
                 label="Contact Number"
                 className="mb-4"
               >
-                <Form.Control type="text" placeholder="Contact Number" />
+                <Form.Control
+                  type="text"
+                  placeholder="Contact Number"
+                  value="+63 000 000 0000"
+                />
               </FloatingLabel>
 
               <FloatingLabel
@@ -69,35 +117,27 @@ function NewCandidateForm() {
                 label="Email Address"
                 className="mb-4"
               >
-                <Form.Control type="text" placeholder="Email Address" />
-              </FloatingLabel>
-
-              <FloatingLabel
-                controlId="streetAddress1"
-                label="Street Address 1"
-                className="mb-4"
-              >
-                <Form.Control type="text" placeholder="Street Address 1" />
-              </FloatingLabel>
-
-              <FloatingLabel
-                controlId="streetAddress2"
-                label="Street Address 2"
-                className="mb-4"
-              >
-                <Form.Control type="text" placeholder="Street Address 2" />
+                <Form.Control
+                  type="text"
+                  placeholder="Email Address"
+                  value="john.egtapen@gmail.com"
+                />
               </FloatingLabel>
 
               <Row className="mb-4">
                 <Form.Group as={Col} controlId="formGridCity">
                   <FloatingLabel controlId="city" label="City">
-                    <Form.Control type="text" placeholder="Taguig" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Taguig"
+                      value="Baguio"
+                    />
                   </FloatingLabel>
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridRegion">
                   <FloatingLabel as={Col} controlId="region" label="Region">
-                    <Form.Control type="text" placeholder="NCR" />
+                    <Form.Control type="text" placeholder="NCR" value="CAR" />
                   </FloatingLabel>
                 </Form.Group>
 
@@ -107,7 +147,11 @@ function NewCandidateForm() {
                     label="Country"
                     className="mb-4"
                   >
-                    <Form.Control type="text" placeholder="Philippines" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Philippines"
+                      value="Philippines"
+                    />
                   </FloatingLabel>
                 </Form.Group>
 
@@ -117,9 +161,15 @@ function NewCandidateForm() {
                     label="Zip Code"
                     className="mb-4"
                   >
-                    <Form.Control type="text" placeholder="0000" />
+                    <Form.Control type="text" placeholder="0000" value="2600" />
                   </FloatingLabel>
                 </Form.Group>
+              </Row>
+              <Row>
+                <Button className="mb-4 col-3 float-end" onClick={toSubmit}>
+                  {" "}
+                  Submit
+                </Button>
               </Row>
             </Form>
           </Col>

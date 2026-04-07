@@ -1,5 +1,5 @@
-import { Button, Card } from "react-bootstrap";
-import { EnvelopeAt, Phone, ShopWindow } from "react-bootstrap-icons";
+import { Card } from "react-bootstrap";
+import { EnvelopeAt, Phone } from "react-bootstrap-icons";
 import ShopButton from "./ShopButton";
 
 function AdminProfile() {

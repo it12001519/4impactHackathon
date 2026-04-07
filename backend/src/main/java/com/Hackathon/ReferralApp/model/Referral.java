@@ -2,11 +2,16 @@ package com.Hackathon.ReferralApp.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.*;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIdentityInfo(
+    generator = ObjectIdGenerators.PropertyGenerator.class,
+    property = "id"
+)
 public class Referral {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

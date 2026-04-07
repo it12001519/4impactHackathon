@@ -12,10 +12,10 @@ import { Lock, PersonCircle } from "react-bootstrap-icons";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const toProfile = () => {
     username != "admin" && password != "admin"
       ? navigate("/profile?user=John Doe")
@@ -69,7 +69,11 @@ function Login() {
                 </div>
               </Card.Body>
               <Card.Footer className="text-center">
-                <img src="src/assets/BadgeQuest - Transparent.png" alt="" width={250} />
+                <img
+                  src="src/assets/BadgeQuest - Transparent.png"
+                  alt=""
+                  width={250}
+                />
               </Card.Footer>
             </Card>
           </Col>

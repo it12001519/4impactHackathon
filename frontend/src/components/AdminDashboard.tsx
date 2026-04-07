@@ -5,8 +5,18 @@ import StatReport from "./StatReport";
 import ViewJobStatus from "./ViewJobStatus";
 import NewJobPosting from "./NewJobPosting";
 import AdminProfile from "./AdminProfile";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import ViewJobStatusRealCount from "./ViewJobStatusRealCount";
 
 function AdminDashboard() {
+  const [jobPostings, setJobPostings] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:8080/api/jobs").then((response) => {
+      setJobPostings(response.data);
+    });
+  }, []);
+
   return (
     <>
       <Container>
@@ -22,7 +32,27 @@ function AdminDashboard() {
             <br />
             <Row className="box-shadow">
               <NewJobPosting />
-
+              {jobPostings.map((jobPost) => (
+                <Col key={jobPost.id} md={4}>
+                  <Card className="job-posting-card">
+                    <Card.Body>
+                      <Card.Title>
+                        {jobPost.jobTitle}{" "}
+                        <Badge bg="danger">{jobPost.referrals.length}</Badge>
+                      </Card.Title>
+                      <Card.Text>
+                        <p
+                          dangerouslySetInnerHTML={{ __html: jobPost.jobDesc }}
+                        ></p>
+                      </Card.Text>
+                      <ViewJobStatus jobId={jobPost.id} />
+                      <Card.Footer className="text-center">
+                        Posted now
+                      </Card.Footer>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
               <Col md={4}>
                 <Card className="job-posting-card">
                   <Card.Body>

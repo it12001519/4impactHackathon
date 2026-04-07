@@ -4,8 +4,8 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 
 function Navigation() {
-  let [searchParams, setSearchParams] = useSearchParams();
-  let user = searchParams.get("user") === null ? "John Doe" : searchParams.get("user");
+  const [searchParams] = useSearchParams();
+  const user = searchParams.get("user") ?? "John Doe";
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">

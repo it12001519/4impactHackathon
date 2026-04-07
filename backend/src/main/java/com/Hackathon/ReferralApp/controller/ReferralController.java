@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/referrals")
+@CrossOrigin(origins = "*", maxAge = 3600)
 public class ReferralController {
 
     private final ReferralService referralService;
